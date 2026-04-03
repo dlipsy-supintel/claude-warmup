@@ -2,7 +2,9 @@ name: Claude Code Warmup
 
 on:
   schedule:
-    - cron: '15 9 * * 1-5'
+      - cron: '45 8  * * 1-6'   # 4:45 AM EDT  → locks 5 AM window
+      - cron: '45 13 * * 1-6'   # 9:45 AM EDT  → locks 10 AM window
+      - cron: '45 18 * * 1-6'   # 2:45 PM EDT  → locks 3 PM window
   workflow_dispatch: {}
 
 concurrency:
